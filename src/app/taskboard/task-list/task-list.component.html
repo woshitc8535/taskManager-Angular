@@ -16,7 +16,7 @@
     <label class="checkbox" nz-checkbox [(ngModel)]="task.Active"></label>
   </div>
 </li>
-<div>
+<div *ngIf="listButton">
   <button  nz-button [nzType]="'primary'" (click)="deleteTasks()">Delete</button>
 </div>
 

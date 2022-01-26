@@ -14,6 +14,7 @@ export class TaskListComponent implements OnInit {
   public tasks: TaskFormModel[];
   rowData: any[];
   public waring = false;
+  public listButton = false;
 
 
   constructor(
@@ -32,6 +33,7 @@ export class TaskListComponent implements OnInit {
         this.rowData = this.tasks.map(obj => (
           { ...obj, Active: 'false'}
         ));
+        this.buttonDisplayCheck();
       }
     });
   }
@@ -48,6 +50,7 @@ export class TaskListComponent implements OnInit {
         ));
         console.log(this.rowData);
         console.log('Load Tasks');
+        this.buttonDisplayCheck();
       }
     });
   }
@@ -70,6 +73,14 @@ export class TaskListComponent implements OnInit {
       this.taskService.deleteTasks(tasks);
     } else {
       this.waring = true;
+    }
+  }
+
+  buttonDisplayCheck(): void {
+    if (this.rowData.length > 0) {
+      this.listButton = true;
+    } else {
+      this.listButton = false;
     }
   }
 }
