@@ -5,7 +5,7 @@
   <nz-form-item>
     <nz-form-control nzErrorTip="Please input your Task Name!">
       <nz-input-group>
-        <label style="font-size: 18px">Description</label>
+        <label style="font-size: 18px; font-weight: bold; color: darkgray">Description</label>
         <input type="text" nz-input formControlName="taskName" placeholder="Task" />
       </nz-input-group>
     </nz-form-control>
@@ -13,7 +13,7 @@
   <nz-form-item>
     <nz-form-control nzErrorTip="Please input your Date!">
       <nz-input-group>
-        <label style="font-size: 18px">Date</label>
+        <label style="font-size: 18px; font-weight: bold; color: darkgray">Date</label>
         <input type="text" nz-input formControlName="date" placeholder="Date" />
         <div *ngIf="waringDisplay" style="font-size: 14px; color: #ff4d4f">Format is not valid, Please Enter yyyy--mm--dd</div>
       </nz-input-group>
