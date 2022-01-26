@@ -1,0 +1,22 @@
+<div *ngIf="waring" style="font-size: 20px; color: #ff4d4f; text-align: center">Please Select at Least one item</div>
+<li *ngFor="let task of rowData; let i = index">
+  <div class="border">
+    <div>
+      <label class="first-level-label">
+        {{task.name}}
+      </label>
+    </div>
+
+    <span>
+      <i nz-icon nzType="schedule" nzTheme="outline"></i>
+      <label>
+        {{task.createDate}}
+      </label>
+    </span>
+    <label class="checkbox" nz-checkbox [(ngModel)]="task.Active"></label>
+  </div>
+</li>
+<div>
+  <button  nz-button [nzType]="'primary'" (click)="deleteTasks()">Delete</button>
+</div>
+

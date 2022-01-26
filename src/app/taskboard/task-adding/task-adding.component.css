@@ -1,0 +1,19 @@
+.task-adding-form {
+  max-width: 300px;
+}
+
+.task-adding-form-margin {
+  margin-bottom: 16px;
+}
+
+.task-adding-form-button {
+  width: 100%;
+  float: right;
+}
+
+.head {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+

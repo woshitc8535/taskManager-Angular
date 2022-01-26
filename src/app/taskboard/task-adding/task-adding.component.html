@@ -1,0 +1,25 @@
+<div class="head">
+  Add Task
+</div>
+<form nz-form [formGroup]="validateForm" class="task-adding-form" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your Task Name!">
+      <nz-input-group>
+        <label style="font-size: 18px">Description</label>
+        <input type="text" nz-input formControlName="taskName" placeholder="Task" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your Date!">
+      <nz-input-group>
+        <label style="font-size: 18px">Date</label>
+        <input type="text" nz-input formControlName="date" placeholder="Date" />
+        <div *ngIf="waringDisplay" style="font-size: 14px; color: #ff4d4f">Format is not valid, Please Enter yyyy--mm--dd</div>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <div nz-row class="task-adding-form-margin">
+  </div>
+  <button nz-button class="task-adding-form-button task-adding-form-margin" [nzType]="'default'">Save</button>
+</form>

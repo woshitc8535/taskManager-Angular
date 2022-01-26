@@ -1,0 +1,12 @@
+<button (click)="displayCreateBoard()">
+  <i *ngIf="display" nz-icon nzType="minus" nzTheme="outline"></i>
+  <span *ngIf="!display">new</span>
+</button>
+<div *ngIf="display" class="border">
+  <app-task-adding></app-task-adding>
+</div>
+
+<div class="border-second">
+  <app-task-list></app-task-list>
+</div>
+
