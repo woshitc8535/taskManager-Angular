@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 RUN ng build --prod
+RUN ls
 RUN  find / dist
 
 FROM nginx:1.20.1
