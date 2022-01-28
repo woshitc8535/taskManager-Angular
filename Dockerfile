@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 RUN ng build --prod
-RUN  find / taskManager-Angular
+RUN  find / dist
 
 FROM nginx:1.20.1
 COPY --from=builder /usr/usr/src/app/dist usr/share/nginx/html
