@@ -9,5 +9,5 @@ RUN ls
 RUN  find / dist
 
 FROM nginx:1.20.1
-COPY --from=builder dist/taskoracle usr/share/nginx/html
+COPY --from=angular-app /usr/src/app/dist/taskoracle usr/share/nginx/html
 COPY ./nginx-angular.conf /etc/nginx/conf.d/default.conf
