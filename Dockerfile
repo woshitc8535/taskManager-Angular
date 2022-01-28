@@ -5,7 +5,6 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 RUN ng build --prod
-RUN ls
 
 FROM nginx:1.20.1
 COPY --from=angular-app /usr/src/app/dist/taskoracle usr/share/nginx/html
