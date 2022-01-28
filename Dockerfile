@@ -7,5 +7,5 @@ RUN npm install
 RUN ng build --prod
 
 FROM nginx:1.20.1
-COPY --from=builder /usr/src/app/dist/taskManager-Angular /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/ /usr/share/nginx/html
 COPY ./nginx-angular.conf /etc/nginx/conf.d/default.conf
