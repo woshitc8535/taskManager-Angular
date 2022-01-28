@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  angular:
+    build: .
+    ports:
+      - 3333:80
