@@ -7,5 +7,10 @@ RUN npm install
 RUN ng build --prod
 
 FROM nginx:1.20.1
+RUN pwd
+RUN cd /usr
+RUN cd src
+RUN cd app
+RUN cd ls
 COPY --from=builder usr/src/app/dist usr/share/nginx/html
 COPY ./nginx-angular.conf /etc/nginx/conf.d/default.conf
