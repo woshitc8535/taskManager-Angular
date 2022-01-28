@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 RUN npm install
-RUN npm run build:prod
+RUN npm run build
 
 FROM nginx:1.20.1
 COPY --from=builder /usr/src/app/dist/taskoracle /usr/share/nginx/html
