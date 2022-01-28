@@ -12,9 +12,9 @@ export class TaskService {
   taskSubject$: Observable<TaskFormModel[]> = this.taskSubject.asObservable();
   displayToggleSubject = new BehaviorSubject<boolean>(undefined);
   toggleSubject$: Observable<boolean> = this.displayToggleSubject.asObservable();
-  private readonly reviewUri = 'http://localhost:8080/task/review-all';
-  private readonly saveUri = 'http://localhost:8080/task/create';
-  private readonly deleteUri = 'http://localhost:8080/task/deleteTasks'
+  private readonly reviewUri = 'http://129.153.144.193:8080/task/review-all';
+  private readonly saveUri = 'http://129.153.144.193:8080/task/create';
+  private readonly deleteUri = 'http://129.153.144.193:8080/task/deleteTasks'
   constructor(
     private http: HttpClient,
   ) { }
