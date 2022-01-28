@@ -8,5 +8,5 @@ RUN ng build --prod
 RUN  find / dist
 
 FROM nginx:1.20.1
-COPY --from=builder /usr/usr/src/app/dist usr/share/nginx/html
+COPY --from=builder dist/taskoracle usr/share/nginx/html
 COPY ./nginx-angular.conf /etc/nginx/conf.d/default.conf
