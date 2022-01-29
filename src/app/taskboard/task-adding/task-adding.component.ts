@@ -35,8 +35,8 @@ export class TaskAddingComponent implements OnInit {
     if (this.timeValidation()) {
       console.log(this.validateForm.controls.date.value);
       this.waringDisplay = false;
-      this.task.name = this.validateForm.controls.taskName.value;
-      this.task.createDate = this.validateForm.controls.date.value;
+      this.task.name = moment(this.validateForm.controls.taskName.value).format('YYYY-MM-DD');
+      this.task.createDate = moment(this.validateForm.controls.date.value).format('YYYY-MM-DD');
       this.taskService.saveTaskForm(this.task);
     } else {
       this.waringDisplay = true;
