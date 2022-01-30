@@ -6,7 +6,7 @@
     <nz-form-control nzErrorTip="Please input your Task Name!">
       <nz-input-group>
         <label style="font-size: 18px; font-weight: bold; color: darkgray">Description</label>
-        <input type="text" nz-input formControlName="taskName" placeholder="Task" />
+        <input type="text" nz-input formControlName="taskName" placeholder="Task" [maxlength]="50"/>
       </nz-input-group>
     </nz-form-control>
   </nz-form-item>
